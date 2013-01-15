@@ -71,7 +71,10 @@
 }
 
 #grid .stick.marked {
-   background-color: red;
+   background-color: #9E9E90;
+}
+#grid .stick.marked.last {
+   background-color: #FF8F5F;
 }
 
 #grid .owner {

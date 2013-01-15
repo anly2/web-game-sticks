@@ -65,7 +65,14 @@ game.handle.stickClicked = function (stick) {
       coords[0] = Math.floor( coords[0] );
 
 
+   //Mark the stick
    stick.className += " marked";
+
+   if(game.current.lastMarked)
+      game.current.lastMarked.className = game.current.lastMarked.className.replace(/ ?last/g, '');
+
+   game.current.lastMarked = stick;
+   stick.className += " last";
 
 
    //Check if it completes a block and assign it to the owner
@@ -169,6 +176,7 @@ game.players  = new Array();
 
 game.current = new Object();
 
+game.current.lastMarked = null;
 game.current.turn = 0; //default, should be reset by .initialize()
 game.current.player = game.players[0]; //default, should be reset by .initialize()
 game.current.markedSticks = 0;

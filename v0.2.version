@@ -1,0 +1,29 @@
+### Sticks ###
+#This is a version file
+#  used for dynamically updating links so that people know there's something new
+#  it also contains the changelogs for a given project
+
+
+version 0.1
+    - Basic functionality
+         + The game is playable as a hotseat multiplayer
+    - Alignment is only right when viewed with Google Chrome
+         + Firefox messes with the border somehow ignoring the fact that there shouldn't be any
+         + Even in Chrome there are weird displacements. They are artificially compensated for but they should be considered.
+    - Potentially an n-player game with n-sized grid
+
+version 0.2
+    - Redid the grid_build-ing
+         + There are no bounding blocks anymore
+         + All is sticks perfectly matched with margins and size. No pointless elements
+    - Added an implementation of the notice system ("system" <- lol)
+         + Changes in turns are now properly announced with the player names
+         + Upon filling the entire grid a game over is declared and the winner is announced.
+                 =  .leadingPlayer()  can actually be called at any time.
+    - Sticks are now colored with the more neutral gray when marked
+    - Last marked stick will be orange to stand out so that players can easily keep track of the game
+
+version 0+
+    - There are some ambitious plans
+          + A game lobby is planned with the option to customize Nicknames, host games, join games and observe games.
+          + An AI player could easily be integrated much like with the SCU game
